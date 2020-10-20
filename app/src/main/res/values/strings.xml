@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Dice Disc</string>
+    <string name="dice_number_1">Dice Number 1</string>
+    <string name="roll">WTF am I gonna throw ?</string>
+    <string name="rules">- At the tee box, roll the dices. Left die informs which type of disc to throw, right die informs how to throw it. \n
+        - If the joker logo is rolled, it is up to that player to select any type of disc or style of throw to substitute. \n
+        - For example, if the disc die lands on “driver” and the throw die lands on the joker logo, the group MUST throw a driver, but the player may choose whichever style of throw they desire. \n
+        - All players on the card must throw the same rolled combination.</string>
+</resources>
