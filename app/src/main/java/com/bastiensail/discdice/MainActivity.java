@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,8 +30,21 @@ public class MainActivity extends AppCompatActivity {
         rollButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rollDiscType(discTypeDice);
-                rollThrowType(throwTypeDice);
+                final Timer timer = new Timer();
+                int begin = 0;
+                int timeInterval = 100;
+                timer.schedule(new TimerTask() {
+                    int counter = 0;
+                    @Override
+                    public void run() {
+                        rollDiscType(discTypeDice);
+                        rollThrowType(throwTypeDice);
+                        counter++;
+                        if (counter >= 10){
+                            timer.cancel();
+                        }
+                    }
+                }, begin, timeInterval);
             }
         });
     }
